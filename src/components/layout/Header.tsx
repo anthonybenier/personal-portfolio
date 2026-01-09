@@ -64,7 +64,7 @@ export const Header = () => {
             </div>
 
             <nav className="hidden md:flex items-center gap-1 ml-4" onMouseLeave={handleNavLeave}>
-                {["About", "Projects", "Skills", "Contact"].map((item) => (
+                {["About", "Projects", "Contact"].map((item) => (
                     <Magnetic key={item} strength={20}>
                         <a
                             href={`#${item.toLowerCase()}`}

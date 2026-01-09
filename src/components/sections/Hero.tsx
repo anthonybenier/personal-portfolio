@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import BlurText from "../reactbits/BlurText";
 import Aurora from "../reactbits/Aurora";
-import { Magnetic } from "../ui/Magnetic";
+
 
 export const Hero = () => {
     const containerRef = useRef<HTMLElement>(null);
@@ -39,15 +39,15 @@ export const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
                     <h2 className="text-xl md:text-2xl font-light text-white/60 mb-4 tracking-wider uppercase">
-                        Product Designer & Vibe Coder
+                        Senior Product Designer & Product Engineer
                     </h2>
                 </motion.div>
 
                 <div className="mb-6">
                     <h1 className="text-5xl md:text-8xl font-bold tracking-tighter mb-6 leading-tight font-display">
-                        <span className="block text-white">Crafting</span>
+                        <span className="block text-white">Designing</span>
                         <BlurText
-                            text="digital experiences"
+                            text="impactful products"
                             className="text-white/50"
                             delay={150}
                             animateBy="words"
@@ -62,25 +62,21 @@ export const Hero = () => {
                     transition={{ delay: 1.5, duration: 1 }}
                     className="text-lg md:text-xl text-white/40 max-w-2xl mb-10 leading-relaxed"
                 >
-                    Specialized in creating ultra-modern web interfaces with a focus on motion, interaction, and accessibility.
+                    I bridge the gap between design and engineering, transforming complex problems into intuitive, high-performance digital products. My approach combines strategic product vision with pixel-perfect execution.
                 </motion.p>
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.8, duration: 0.6 }}
-                    className="flex flex-wrap gap-4"
+                    className="flex flex-col md:flex-row gap-6 items-center"
                 >
-                    <Magnetic strength={40}>
-                        <Button>
-                            View Projects <ArrowRight className="ml-2 w-4 h-4" />
-                        </Button>
-                    </Magnetic>
-                    <Magnetic strength={20}>
-                        <Button variant="outline">
-                            Contact Me
-                        </Button>
-                    </Magnetic>
+                    <Button onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })} className="whitespace-nowrap flex items-center gap-2">
+                        View Projects <ArrowRight className="w-4 h-4" />
+                    </Button>
+                    <Button variant="outline" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="whitespace-nowrap">
+                        Contact Me
+                    </Button>
                 </motion.div>
             </div>
 

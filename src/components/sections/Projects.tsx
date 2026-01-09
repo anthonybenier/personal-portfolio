@@ -7,26 +7,26 @@ import BlurText from "../reactbits/BlurText";
 const projects = [
     {
         title: "Neon Commerce",
-        desc: "A futuristic e-commerce platform built with Next.js and WebGL.",
-        tags: ["Next.js", "WebGL", "Tailwind"],
+        desc: "Redesigned the entire checkout flow for a high-traffic e-commerce platform. As Lead Product Designer, I simplified the user journey, resulting in a 15% increase in conversion rates.",
+        tags: ["Product Strategy", "UX Research", "Figma", "Next.js"],
         image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=85&w=1200",
     },
     {
         title: "Aura Dashboard",
-        desc: "SaaS analytics dashboard with real-time data visualization.",
-        tags: ["React", "D3.js", "Framer Motion"],
+        desc: "Built a real-time analytics suite for SaaS clients. Handled the full stack (React + Node.js) and designed a data visualization system that reduced report generation time by 40%.",
+        tags: ["System Design", "React", "D3.js", "Performance"],
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=85&w=1200",
     },
     {
         title: "Zenith UI",
-        desc: "An open-source React component library for modern apps.",
-        tags: ["TypeScript", "Storybook", "NPM"],
+        desc: "Created an open-source design system to unify branding across multiple products. My role involved documenting tokens, building accessible components, and driving adoption across engineering teams.",
+        tags: ["Design Systems", "Accessibility", "TypeScript", "Storybook"],
         image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=85&w=1200",
     },
     {
         title: "Echo Notes",
-        desc: "AI-powered note-taking app with voice transcription.",
-        tags: ["OpenAI", "React Native", "Firebase"],
+        desc: "Developed an AI-first note-taking mobile app. I led the product discovery phase and implemented the local-first sync engine, achieving a 4.8/5 star rating on launch.",
+        tags: ["Mobile UX", "Local-First", "React Native", "AI Integration"],
         image: "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&q=85&w=1200",
     },
 ];
