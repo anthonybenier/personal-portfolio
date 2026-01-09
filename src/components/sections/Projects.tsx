@@ -55,6 +55,9 @@ export const Projects = () => {
                                         <img
                                             src={project.image}
                                             alt={project.title}
+                                            loading="lazy"
+                                            width="800"
+                                            height="450"
                                             className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
                                         />
                                     </Link>

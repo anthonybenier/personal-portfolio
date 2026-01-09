@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import { Button } from "../components/ui/Button";
 import { BlurReveal } from "../components/ui/BlurReveal";
+import { SEO } from "../components/seo/SEO";
 
 
 export const ProjectDetails = () => {
@@ -47,6 +48,11 @@ export const ProjectDetails = () => {
 
     return (
         <Layout>
+            <SEO
+                title={`${project.title} - Anthony Benier`}
+                description={project.subtitle}
+                image={project.image}
+            />
             <div className="min-h-screen bg-black text-white pt-32 px-6 md:px-12 lg:px-24 pb-20">
                 {/* Navigation */}
                 <motion.div
