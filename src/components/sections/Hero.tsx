@@ -1,14 +1,15 @@
 import { useRef } from "react";
 import { Button } from "../ui/Button";
 import { ArrowRight } from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion"; // , useScroll, useTransform
 import BlurText from "../reactbits/BlurText";
-import Aurora from "../reactbits/Aurora";
+// import Aurora from "../reactbits/Aurora";
 
 
 export const Hero = () => {
     const containerRef = useRef<HTMLElement>(null);
 
+    /*
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start start", "end start"]
@@ -16,10 +17,11 @@ export const Hero = () => {
 
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
     const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+    */
 
     return (
         <section ref={containerRef} className="h-screen flex flex-col justify-center px-6 relative overflow-hidden">
-            {/* Background Aurora with Parallax */}
+            {/* Background Aurora with Parallax - Disabled for performance
             <motion.div
                 style={{ y, opacity }}
                 className="absolute inset-0 z-0 pointer-events-none"
@@ -31,6 +33,7 @@ export const Hero = () => {
                     speed={0.5}
                 />
             </motion.div>
+            */}
 
             <div className="max-w-7xl mx-auto w-full z-10">
                 <motion.div
