@@ -1,17 +1,15 @@
-import { Layout } from "./components/layout/Layout";
-import { Hero } from "./components/sections/Hero";
-import { About } from "./components/sections/About";
-import { Projects } from "./components/sections/Projects";
-import { Contact } from "./components/sections/Contact";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { ProjectDetails } from "./pages/ProjectDetails";
 
 function App() {
   return (
-    <Layout>
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
-    </Layout>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/project/:id" element={<ProjectDetails />} />
+      </Routes>
+    </Router>
   );
 }
 

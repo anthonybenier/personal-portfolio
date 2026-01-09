@@ -1,4 +1,5 @@
 import { Card } from "../ui/Card";
+import { Link } from "react-router-dom";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "../ui/Button";
 import { BlurReveal } from "../ui/BlurReveal";
@@ -6,10 +7,10 @@ import BlurText from "../reactbits/BlurText";
 
 const projects = [
     {
-        title: "Neon Commerce",
-        desc: "Redesigned the entire checkout flow for a high-traffic e-commerce platform. As Lead Product Designer, I simplified the user journey, resulting in a 15% increase in conversion rates.",
-        tags: ["Product Strategy", "UX Research", "Figma", "Next.js"],
-        image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=85&w=1200",
+        title: "Personal Portfolio",
+        desc: "A high-performance, immersive portfolio website built with React 19, Tailwind CSS v4, and WebGL. Features fluid animations, 'Liquid Glass' UI, and a narrative-driven user experience.",
+        tags: ["React 19", "Tailwind v4", "WebGL", "Framer Motion"],
+        image: "/projects/portfolio-screenshot.png",
     },
     {
         title: "Aura Dashboard",
@@ -49,20 +50,24 @@ export const Projects = () => {
                     {projects.map((project, index) => (
                         <BlurReveal key={index} delay={index * 0.1} className={index % 2 === 1 ? "md:mt-24" : ""}>
                             <Card className="h-full flex flex-col group overflow-hidden p-0 border-0 bg-transparent">
-                                <div className="relative overflow-hidden rounded-2xl aspect-video mb-6">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
-                                        <Button variant="outline" className="rounded-full p-3"><ExternalLink className="w-5 h-5" /></Button>
-                                        <Button variant="outline" className="rounded-full p-3"><Github className="w-5 h-5" /></Button>
+                                <div className="relative overflow-hidden rounded-2xl aspect-video mb-6 cursor-pointer">
+                                    <Link to="/project/personal-portfolio">
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                                        />
+                                    </Link>
+                                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm pointer-events-none">
+                                        <Button variant="outline" className="rounded-full p-3 pointer-events-auto"><ExternalLink className="w-5 h-5" /></Button>
+                                        <Button variant="outline" className="rounded-full p-3 pointer-events-auto"><Github className="w-5 h-5" /></Button>
                                     </div>
                                 </div>
 
                                 <div className="flex-grow px-2">
-                                    <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-blue-400 transition-colors font-display">{project.title}</h3>
+                                    <Link to="/project/personal-portfolio">
+                                        <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-blue-400 transition-colors font-display inline-block">{project.title}</h3>
+                                    </Link>
                                     <p className="text-white/60 mb-4 line-clamp-2">{project.desc}</p>
                                     <div className="flex flex-wrap gap-2 mt-auto">
                                         {project.tags.map(tag => (
