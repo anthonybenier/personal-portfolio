@@ -6,7 +6,7 @@ interface ButtonProps extends HTMLMotionProps<"button"> {
     className?: string; // HTMLMotionProps includes className, but explicit is fine
 }
 
-export const Button = ({ children, variant = "primary", className, ...props }: ButtonProps) => {
+export const Button = ({ children, variant = "primary", className, "aria-label": ariaLabel, ...props }: ButtonProps) => {
     const variants = {
         primary: "bg-white text-black hover:bg-gray-200 border border-transparent",
         outline: "bg-transparent text-white border border-white/20 hover:bg-white/10",
@@ -22,6 +22,7 @@ export const Button = ({ children, variant = "primary", className, ...props }: B
                 variants[variant],
                 className
             )}
+            aria-label={ariaLabel}
             {...props}
         >
             {children}

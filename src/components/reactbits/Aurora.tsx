@@ -129,7 +129,8 @@ export default function Aurora(props: AuroraProps) {
         const renderer = new Renderer({
             alpha: true,
             premultipliedAlpha: true,
-            antialias: true
+            antialias: true,
+            dpr: Math.min(window.devicePixelRatio, 2) // Cap DPR for performance
         });
         const gl = renderer.gl;
         gl.clearColor(0, 0, 0, 0);
@@ -176,8 +177,13 @@ export default function Aurora(props: AuroraProps) {
         ctn.appendChild(gl.canvas);
 
         let animateId = 0;
+        let isVisible = true;
+
         const update = (t: number) => {
             animateId = requestAnimationFrame(update);
+
+            if (!isVisible) return; // Skip rendering if not visible
+
             const { time = t * 0.01, speed = 1.0 } = propsRef.current;
             if (program) {
                 program.uniforms.uTime.value = time * speed * 0.1;
@@ -193,11 +199,19 @@ export default function Aurora(props: AuroraProps) {
         };
         animateId = requestAnimationFrame(update);
 
+        // Intersection Observer to pause rendering when off-screen
+        const observer = new IntersectionObserver(([entry]) => {
+            isVisible = entry.isIntersecting;
+        }, { threshold: 0 });
+
+        observer.observe(ctn);
+
         resize();
 
         return () => {
             cancelAnimationFrame(animateId);
             window.removeEventListener('resize', resize);
+            observer.disconnect();
             if (ctn && gl.canvas.parentNode === ctn) {
                 ctn.removeChild(gl.canvas);
             }

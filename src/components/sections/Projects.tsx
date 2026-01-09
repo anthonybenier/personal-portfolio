@@ -62,8 +62,8 @@ export const Projects = () => {
                                         />
                                     </Link>
                                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm pointer-events-none">
-                                        <Button variant="outline" className="rounded-full p-3 pointer-events-auto"><ExternalLink className="w-5 h-5" /></Button>
-                                        <Button variant="outline" className="rounded-full p-3 pointer-events-auto"><Github className="w-5 h-5" /></Button>
+                                        <Button variant="outline" className="rounded-full p-3 pointer-events-auto" aria-label={`View ${project.title} live site`}><ExternalLink className="w-5 h-5" /></Button>
+                                        <Button variant="outline" className="rounded-full p-3 pointer-events-auto" aria-label={`View ${project.title} source code`}><Github className="w-5 h-5" /></Button>
                                     </div>
                                 </div>
 
