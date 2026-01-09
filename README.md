@@ -1,64 +1,89 @@
-# Portfolio - Anthony Benier
+# Portfolio Website - Anthony Benier
 
-A modern, high-performance portfolio website built for optimal user experience and visual impact.
+![Project Status](https://img.shields.io/badge/status-active-success.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## ✨ Key Features
+A high-performance, immersive portfolio website designed for a **Senior Product Designer & Product Engineer**. Built with modern web technologies to bridge the gap between design and engineering.
 
-- **Immersive Animations**:
-  - **Liquid Glass Header**: Morphing "pill" navigation with fluid entry/exit animations (Framer Motion).
-  - **Splash Cursor**: WebGL-based fluid interaction trail (ReactBits).
-  - **Aurora Background**: Mesmerizing WebGL background effect (ogl).
-  - **BlurText**: Cinematic text reveal for the hero section.
-- **Ultra-Smooth Scrolling**: Integrated **Lenis** for industry-standard inertia scrolling and fluid anchor navigation.
-- **Responsive Design**: Full-width fluid layout adapted for all devices, from mobile to ultra-wide screens.
-- **Modern UI**: Custom-built components with glassmorphism, subtle gradients, and clean typography.
+## 🌟 Key Features
+
+-   **Hybrid Persona**: Content tailored to a "Design Engineer" profile, emphasizing strategic product vision and pixel-perfect execution.
+-   **Immersive Hero Section**: Featuring a WebGL-based "Aurora" background with parallax effects and cinematic text reveals.
+-   **Narrative About Section**: Moves beyond simple skill lists to tell a story about product strategy, UX/UI, and engineering quality.
+-   **Interactive UI**:
+    -   "Liquid Glass" navigation that morphs on hover.
+    -   Smooth scrolling powered by `Lenis`.
+    -   Fluid cursor interactions (SplashCursor).
+    -   Responsive grids and animated reveals using `Framer Motion`.
+-   **Performance First**: Optimized assets, `font-display: swap`, and efficient animations ensuring 60fps performance.
+-   **Modern Tech Stack**: React, TypeScript, Tailwind CSS v4, and Vite.
 
 ## 🛠️ Tech Stack
 
-- **Core**: [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) + [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Motion**: [Framer Motion](https://www.framer.com/motion/) + [Lenis](https://lenis.studiofreight.com/)
-- **WebGL**: [ogl](https://github.com/oframe/ogl) (for Aurora effect)
-- **Icons**: [Lucide React](https://lucide.dev/)
+-   **Frontend**: React 19, TypeScript
+-   **Styling**: Tailwind CSS v4
+-   **Animations**: Framer Motion, GSAP (optional integration)
+-   **Rendering**: WebGL (via custom shaders)
+-   **Build Tool**: Vite
+-   **Fonts**: Syne (Display), Plus Jakarta Sans (Body), JetBrains Mono (Code/Technical)
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js (v18+ recommended)
-- npm or pnpm
+-   Node.js (v18+)
+-   npm or pnpm
 
 ### Installation
 
-1.  **Clone the repository**:
+1.  Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/portfolio.git
-    cd portfolio
+    git clone https://github.com/anthonybenier/personal-portfolio.git
+    cd personal-portfolio
     ```
 
-2.  **Install dependencies**:
+2.  Install dependencies:
     ```bash
     npm install
-    # or
-    pnpm install
     ```
 
-3.  **Run Development Server**:
+3.  Run the development server:
     ```bash
     npm run dev
     ```
-    The site will be available at `http://localhost:5173`.
 
-## 📦 Build for Production
+4.  Build for production:
+    ```bash
+    npm run build
+    ```
 
-To create a production-ready build:
+## 📂 Project Structure
 
-```bash
-npm run build
+```
+src/
+├── components/
+│   ├── layout/       # Header, Footer, Layout wrapper
+│   ├── sections/     # Hero, About, Projects, Contact
+│   ├── ui/           # Reusable primitives (Button, BlurReveal, Magnetic)
+│   └── reactbits/    # Advanced visual effects (Aurora, BlurText, SplashCursor)
+├── hooks/            # Custom hooks (useSmoothScroll)
+├── utils/            # Helper functions
+└── styles/           # Global styles and Tailwind configuration
 ```
 
-This will generate optimized static assets in the `dist` folder.
+## 🎨 Design System
 
-## 📄 License
+-   **Colors**: Minimalist monochrome palette (Black/White) with subtle gradients.
+-   **Typography**:
+    -   *Display*: Syne - For bold, artistic headlines.
+    -   *Body*: Plus Jakarta Sans - For clean, readable text.
+    -   *Technical*: JetBrains Mono - For code snippets and technical details.
+-   **Motion**: Fluid transitions, "Apple-style" scroll reveals, and physics-based interactions.
 
-[MIT](LICENSE)
+## 👤 Author
+
+**Anthony Benier** – Product Designer & Product Engineer
+
+---
+
+*Verified and polished for production.*
