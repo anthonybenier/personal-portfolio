@@ -1,15 +1,6 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Lenis from "lenis";
-
-interface SmoothScrollContextType {
-    lenis: Lenis | null;
-}
-
-const SmoothScrollContext = createContext<SmoothScrollContextType>({
-    lenis: null,
-});
-
-export const useSmoothScroll = () => useContext(SmoothScrollContext);
+import { SmoothScrollContext } from "../../hooks/useSmoothScroll";
 
 export const SmoothScroll = ({ children }: { children: React.ReactNode }) => {
     const [lenis, setLenis] = useState<Lenis | null>(null);
