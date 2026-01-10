@@ -7,13 +7,13 @@ export const SmoothScroll = ({ children }: { children: React.ReactNode }) => {
 
     useEffect(() => {
         const lenisInstance = new Lenis({
-            duration: 1.2,
+            duration: 2.5, // Increased for heavier feel
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             orientation: "vertical",
             gestureOrientation: "vertical",
             smoothWheel: true,
-            wheelMultiplier: 1,
-            touchMultiplier: 2,
+            wheelMultiplier: 0.8, // Slightly reduced to make it feel weightier
+            touchMultiplier: 1.5,
         });
 
         setLenis(lenisInstance);

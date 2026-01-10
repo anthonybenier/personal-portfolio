@@ -1,29 +1,23 @@
-
 import { Layout } from "../components/layout/Layout";
-import { Hero } from "../components/sections/Hero";
-import { About } from "../components/sections/About";
-import { Projects } from "../components/sections/Projects";
-import { Contact } from "../components/sections/Contact";
 import { SEO } from "../components/seo/SEO";
-// import { lazy, Suspense } from "react";
-
-// const SplashCursor = lazy(() => import("../components/reactbits/SplashCursor"));
+import { AntigravityHero } from "../components/sections/AntigravityHero";
+import { AntigravityAbout } from "../components/sections/AntigravityAbout";
+import { AntigravityProjects } from "../components/sections/AntigravityProjects";
+import { AntigravityContact } from "../components/sections/AntigravityContact";
 
 export const Home = () => {
     return (
         <Layout>
             <SEO title="Anthony Benier | Product Designer & Engineer" />
 
-            {/* Disabled for performance TBT
-            <Suspense fallback={null}>
-                <SplashCursor />
-            </Suspense>
-            */}
-
-            <Hero />
-            <About />
-            <Projects />
-            <Contact />
+            <main className="w-full bg-[#050505]">
+                <AntigravityHero />
+                <div className="relative z-10 bg-[#050505]">
+                    <AntigravityAbout />
+                    <AntigravityProjects />
+                    <AntigravityContact />
+                </div>
+            </main>
         </Layout>
     );
 };

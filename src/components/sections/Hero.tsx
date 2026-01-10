@@ -20,7 +20,7 @@ export const Hero = () => {
     */
 
     return (
-        <section ref={containerRef} className="h-screen flex flex-col justify-center px-6 relative overflow-hidden">
+        <section ref={containerRef} className="h-screen w-full flex flex-col justify-center px-6 relative overflow-hidden snap-start flex-shrink-0">
             {/* Background Aurora with Parallax - Disabled for performance
             <motion.div
                 style={{ y, opacity }}

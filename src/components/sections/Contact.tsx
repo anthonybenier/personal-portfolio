@@ -5,7 +5,7 @@ import { Textarea } from "../ui/Textarea";
 
 export const Contact = () => {
     return (
-        <section id="contact" className="py-32 px-6 md:px-12 lg:px-24 bg-black">
+        <section id="contact" className="h-screen w-full py-32 px-6 md:px-12 lg:px-24 bg-zinc-950 snap-start flex-shrink-0 flex items-center justify-center">
             <div className="w-full">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

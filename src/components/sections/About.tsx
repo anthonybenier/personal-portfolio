@@ -1,13 +1,11 @@
 import { BlurReveal } from "../ui/BlurReveal";
 import BlurText from "../reactbits/BlurText";
-
-
-
+import Avatar from "../../assets/Avatar.png";
 
 export const About = () => {
 
     return (
-        <section id="about" className="py-24 px-6 md:px-12 lg:px-24 bg-black">
+        <section id="about" className="h-screen w-full py-24 px-6 md:px-12 lg:px-24 bg-black snap-start flex-shrink-0 flex items-center justify-center overflow-hidden relative">
             <div className="w-full max-w-7xl mx-auto">
                 <div className="mb-16">
                     <BlurText
@@ -18,13 +16,33 @@ export const About = () => {
                         direction="bottom"
                     />
                     <BlurReveal>
-                        <div className="space-y-6 text-xl md:text-2xl text-white/60 leading-relaxed max-w-3xl">
-                            <p>
-                                At the intersection of design and engineering, I don't just hand off designs—I build them. My background allows me to own the entire product lifecycle, ensuring that the original vision is preserved from the first Figma pixel to the final production deploy.
-                            </p>
-                            <p>
-                                I believe that great products are born from a deep understanding of user needs and a relentless commitment to quality. Whether it's refining a micro-interaction or architecting a scalable UI system, I treat code as a creative tool to deliver experiences that feel as good as they look.
-                            </p>
+                        <div className="flex flex-col md:flex-row items-center relative gap-8 md:gap-0">
+                            <div className="space-y-6 text-xl md:text-2xl text-white/60 leading-relaxed max-w-3xl flex-1 relative z-10">
+                                <p>
+                                    At the intersection of design and engineering, I don't just hand off designs—I build them. My background allows me to own the entire product lifecycle, ensuring that the original vision is preserved from the first Figma pixel to the final production deploy.
+                                </p>
+                                <p>
+                                    I believe that great products are born from a deep understanding of user needs and a relentless commitment to quality. Whether it's refining a micro-interaction or architecting a scalable UI system, I treat code as a creative tool to deliver experiences that feel as good as they look.
+                                </p>
+                            </div>
+
+                            {/* Photo Integration - Destructured */}
+                            <div className="flex-1 flex justify-center md:justify-start w-full md:w-auto">
+                                <div className="relative w-64 h-64 md:w-[550px] md:h-[550px] md:-ml-24 md:-mt-16 group">
+                                    <div className="relative w-full h-full -rotate-6 group-hover:rotate-0 transition-transform duration-500 ease-spring">
+                                        <img
+                                            src={Avatar}
+                                            alt="Anthony"
+                                            className="w-full h-full object-contain relative z-10 drop-shadow-2xl"
+                                        />
+
+                                        {/* Playful element: floating badge */}
+                                        <div className="absolute -bottom-6 -right-6 bg-white text-black text-sm font-bold px-4 py-2 rounded-full -rotate-12 hidden md:block shadow-lg">
+                                            The Engineer
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </BlurReveal>
                 </div>
