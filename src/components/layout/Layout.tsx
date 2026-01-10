@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import SplashCursor from "../reactbits/SplashCursor";
+import { CustomCursor } from "../ui/CustomCursor";
 import { SmoothScroll } from "../utils/SmoothScroll";
 
 interface LayoutProps {
@@ -12,7 +12,7 @@ export const Layout = ({ children }: LayoutProps) => {
     return (
         <SmoothScroll>
             <div className="min-h-screen bg-black text-white selection:bg-white selection:text-black">
-                <SplashCursor />
+                <CustomCursor />
                 <Header />
                 <main className="flex-grow">
                     {children}
