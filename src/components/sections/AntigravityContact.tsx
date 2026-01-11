@@ -14,7 +14,7 @@ export const AntigravityContact = () => {
     const xText = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
 
     return (
-        <section ref={containerRef} className="relative min-h-screen bg-[#050505] overflow-hidden flex flex-col justify-center py-32">
+        <section id="contact" ref={containerRef} className="relative min-h-screen bg-[#050505] overflow-hidden flex flex-col justify-center py-32">
             {/* Background Mesh - Full Width */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear-gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-20 pointer-events-none" />
 

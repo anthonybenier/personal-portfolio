@@ -14,7 +14,7 @@ export const AntigravityAbout = () => {
     const rotate = useTransform(scrollYProgress, [0, 1], [0, 10]);
 
     return (
-        <section ref={containerRef} className="relative min-h-screen bg-[#050505] overflow-hidden py-32">
+        <section id="about" ref={containerRef} className="relative min-h-screen bg-[#050505] py-32 overflow-hidden flex flex-col justify-center">
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]" />
 
