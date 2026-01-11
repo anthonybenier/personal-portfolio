@@ -2,7 +2,7 @@ import { motion, type HTMLMotionProps } from "framer-motion";
 import { cn } from "../../utils/cn";
 
 interface ButtonProps extends HTMLMotionProps<"button"> {
-    variant?: "primary" | "outline" | "ghost";
+    variant?: "primary" | "outline" | "ghost" | "neon";
     className?: string; // HTMLMotionProps includes className, but explicit is fine
 }
 
@@ -11,6 +11,7 @@ export const Button = ({ children, variant = "primary", className, "aria-label":
         primary: "bg-white text-black hover:bg-gray-200 border border-transparent",
         outline: "bg-transparent text-white border border-white/20 hover:bg-white/10",
         ghost: "bg-transparent text-white hover:bg-white/5",
+        neon: "bg-white text-black hover:!bg-[#FF3B00] hover:text-white border border-transparent transition-colors duration-300 rounded-none",
     };
 
     return (

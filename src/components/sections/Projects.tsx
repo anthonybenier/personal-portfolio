@@ -34,7 +34,7 @@ const projects = [
 
 export const Projects = () => {
     return (
-        <section id="projects" className="py-32 px-6 md:px-12 lg:px-24">
+        <section id="projects" className="h-screen w-full py-32 px-6 md:px-12 lg:px-24 snap-start flex-shrink-0 overflow-y-auto bg-neutral-900">
             <div className="w-full max-w-7xl mx-auto">
                 <div className="mb-16">
                     <BlurText

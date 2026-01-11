@@ -14,6 +14,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "neon-orange": "#FF3B00",
       },
     },
   },

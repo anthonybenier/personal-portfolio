@@ -19,6 +19,8 @@ body {
   background-color: rgb(var(--background));
   color: rgb(var(--foreground));
   font-family: var(--font-sans);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 html.lenis,
@@ -40,4 +42,24 @@ html.lenis body {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+/* Scroll Snap Utilities */
+/* Scroll Snap Utilities - DEPRECATED for Antigravity, but keeping for safety if needed later */
+@layer utilities {
+  .snap-start-always {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .text-neon-orange {
+    color: #FF3B00;
+    text-shadow: 0 0 20px rgba(255, 59, 0, 0.5);
+  }
+
+  .text-massive {
+    font-size: clamp(4rem, 15vw, 20rem);
+    line-height: 0.8;
+    letter-spacing: -0.05em;
+  }
 }
